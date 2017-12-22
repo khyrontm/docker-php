@@ -11,4 +11,5 @@ RUN    apt-get update \
     && docker-php-ext-enable redis \
     && pecl install imagick-3.4.3 \
     && docker-php-ext-enable imagick \
+    && a2enmod rewrite
 
