@@ -3,8 +3,8 @@ FROM php:7-apache
 MAINTAINER Fuat Taneri<fuat.taneri@eventim.de>
 
 RUN    apt-get update \
-    && apt-get install -y git zlib1g-dev libgd-dev libmcrypt-dev libxml2-dev libxslt-dev libmagickwand-dev --no-install-recommends\
-    && docker-php-ext-install pdo_mysql zip bcmath gd soap xmlrpc xsl opcache \
+    && apt-get install -y git zlib1g-dev libgd-dev libxml2-dev libxslt-dev libmagickwand-dev libicu-dev --no-install-recommends\
+    && docker-php-ext-install pdo_mysql zip bcmath gd soap xmlrpc xsl opcache intl  \
     && pecl install apcu-5.1.8 \
     && docker-php-ext-enable apcu \
     && pecl install redis-3.1.4 \
